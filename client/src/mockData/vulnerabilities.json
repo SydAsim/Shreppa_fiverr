@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "SQL Injection in User Login",
+    "severity": "critical",
+    "status": "open",
+    "assignedTo": "Alice Johnson",
+    "dueDate": "2024-01-15",
+    "description": "Critical SQL injection vulnerability found in user authentication system.",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "name": "Cross-Site Scripting (XSS)",
+    "severity": "high",
+    "status": "in-progress",
+    "assignedTo": "Bob Smith",
+    "dueDate": "2024-01-20",
+    "description": "XSS vulnerability in comment system allows script execution.",
+    "createdAt": "2024-01-02T00:00:00.000Z"
+  },
+  {
+    "id": "3",
+    "name": "Outdated SSL Certificate",
+    "severity": "medium",
+    "status": "open",
+    "assignedTo": "Carol Davis",
+    "dueDate": "2024-01-25",
+    "description": "SSL certificate is approaching expiration date.",
+    "createdAt": "2024-01-03T00:00:00.000Z"
+  },
+  {
+    "id": "4",
+    "name": "Weak Password Policy",
+    "severity": "low",
+    "status": "resolved",
+    "assignedTo": "David Wilson",
+    "dueDate": "2024-01-10",
+    "description": "Password policy does not meet security requirements.",
+    "createdAt": "2024-01-04T00:00:00.000Z"
+  }
+]
