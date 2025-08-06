@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Test</title>
+</head>
+<body>
+    <script>
+        // Test if dashboard is accessible
+        fetch('http://localhost:5000')
+            .then(response => response.text())
+            .then(html => {
+                console.log('Main page loaded successfully');
+                // Try to access dashboard (might need auth)
+                const testAuth = () => {
+                    localStorage.setItem('auth', 'true');
+                    localStorage.setItem('user', JSON.stringify({
+                        id: '1',
+                        username: 'admin',
+                        name: 'Admin User'
+                    }));
+                    console.log('Auth set in localStorage');
+                    window.location.reload();
+                };
+                testAuth();
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+    <p>Testing dashboard accessibility...</p>
+</body>
+</html>
