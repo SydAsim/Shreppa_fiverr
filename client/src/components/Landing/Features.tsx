@@ -88,6 +88,42 @@ export default function Features() {
             </motion.div>
           ))}
         </div>
+
+        {/* Visual Showcase Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
+                alt="Security Analytics Dashboard"
+                className="rounded-2xl shadow-xl w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="font-semibold">Real-time Analytics</h4>
+                <p className="text-sm text-white/80">Monitor threats as they happen</p>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
+                alt="Security Team Collaboration"
+                className="rounded-2xl shadow-xl w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <h4 className="font-semibold">Team Collaboration</h4>
+                <p className="text-sm text-white/80">Work together seamlessly</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

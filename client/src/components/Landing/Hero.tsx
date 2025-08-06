@@ -79,33 +79,41 @@ export default function Hero({ onGetStartedClick }: HeroProps) {
           </Button>
         </motion.div>
 
-        {/* Simple Hero Image */}
+        {/* Hero Dashboard Preview */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 1 }}
-          className="relative max-w-3xl mx-auto"
+          className="relative max-w-4xl mx-auto"
         >
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 p-8 shadow-2xl">
-            <div className="flex items-center justify-center space-x-8 text-slate-400">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Shield className="w-6 h-6 text-green-400" />
-                </div>
-                <p className="text-sm">Secure</p>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700 p-2 shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600"
+              alt="SHERPA Security Dashboard"
+              className="rounded-lg w-full h-auto shadow-lg"
+            />
+            <div className="absolute inset-2 bg-gradient-to-t from-slate-900/30 to-transparent rounded-lg"></div>
+          </div>
+          
+          {/* Trust Indicators Below Image */}
+          <div className="flex items-center justify-center space-x-8 mt-8 text-slate-400">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <Shield className="w-6 h-6 text-green-400" />
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Shield className="w-6 h-6 text-blue-400" />
-                </div>
-                <p className="text-sm">Reliable</p>
+              <p className="text-sm">Secure</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <Shield className="w-6 h-6 text-blue-400" />
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Shield className="w-6 h-6 text-purple-400" />
-                </div>
-                <p className="text-sm">Trusted</p>
+              <p className="text-sm">Reliable</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <Shield className="w-6 h-6 text-purple-400" />
               </div>
+              <p className="text-sm">Trusted</p>
             </div>
           </div>
         </motion.div>

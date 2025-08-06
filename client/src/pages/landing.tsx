@@ -7,6 +7,7 @@ import HowItWorks from '@/components/Landing/HowItWorks';
 import VulnerabilityFeed from '@/components/Landing/VulnerabilityFeed';
 import Testimonials from '@/components/Landing/Testimonials';
 import FinalCTA from '@/components/Landing/FinalCTA';
+import Footer from '@/components/Landing/Footer';
 
 export default function Landing() {
   const [, setLocation] = useLocation();
@@ -24,6 +25,7 @@ export default function Landing() {
       <VulnerabilityFeed />
       <Testimonials />
       <FinalCTA onStartTrialClick={handleLoginClick} />
+      <Footer />
     </div>
   );
 }

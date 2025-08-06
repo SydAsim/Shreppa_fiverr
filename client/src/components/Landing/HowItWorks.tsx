@@ -86,6 +86,30 @@ export default function HowItWorks() {
           ))}
         </div>
       </div>
+
+      {/* Visual Process Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="mt-20"
+      >
+        <div className="relative">
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600"
+            alt="SHERPA Security Process Workflow"
+            className="rounded-2xl shadow-2xl w-full h-auto"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 rounded-2xl"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white">
+              <h3 className="text-2xl font-bold mb-2">See SHERPA in Action</h3>
+              <p className="text-white/90">Real-time vulnerability management dashboard</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
