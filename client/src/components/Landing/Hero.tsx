@@ -15,95 +15,99 @@ export default function Hero({ onGetStartedClick }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-bg">
-      {/* Floating Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="floating-element absolute top-20 left-10 w-20 h-20 bg-white/20 rounded-full"></div>
-        <div className="floating-element absolute top-40 right-20 w-16 h-16 bg-white/20 rounded-lg rotate-45"></div>
-        <div className="floating-element absolute bottom-32 left-1/4 w-12 h-12 bg-white/20 rounded-full"></div>
-        <div className="floating-element absolute top-60 right-1/3 w-8 h-8 bg-white/20 rounded-full"></div>
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-900 via-blue-900 to-slate-800">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-12"
         >
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-            className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mx-auto mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-8 shadow-lg"
           >
-            <Shield className="w-12 h-12 text-white" />
+            <Shield className="w-8 h-8 text-white" />
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6"
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
           >
-            Secure Your
-            <motion.span
-              initial={{ width: 0 }}
-              animate={{ width: "100%" }}
-              transition={{ delay: 1.5, duration: 3, ease: "linear" }}
-              className="block typewriter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 overflow-hidden whitespace-nowrap border-r-2 border-white"
-            >
-              Digital Assets
-            </motion.span>
+            SHERPA
+            <span className="block text-3xl sm:text-4xl lg:text-5xl font-normal text-blue-300 mt-2">
+              Security You Can Trust
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-xl sm:text-2xl text-white/90 mb-12 max-w-3xl mx-auto"
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            AI-powered vulnerability management platform that identifies, prioritizes, and resolves security threats before they impact your business.
+            Protecting your digital assets with proven vulnerability management. 
+            Simple, reliable, and trusted by security teams worldwide.
           </motion.p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
           <Button
             onClick={onGetStartedClick}
             size="lg"
-            className="bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-xl font-semibold transform hover:scale-105 transition-all"
+            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all"
           >
-            Get Started Free
+            Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           <Button
             onClick={scrollToFeatures}
             variant="outline"
             size="lg"
-            className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 rounded-xl font-semibold"
+            className="border-2 border-slate-400 text-slate-300 hover:bg-slate-800 hover:border-slate-300 text-lg px-8 py-4 rounded-lg font-medium transition-all"
           >
             Learn More
           </Button>
         </motion.div>
 
-        {/* Hero Image */}
+        {/* Simple Hero Image */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.1, duration: 1 }}
-          className="relative max-w-4xl mx-auto"
+          transition={{ delay: 0.9, duration: 1 }}
+          className="relative max-w-3xl mx-auto"
         >
-          <img
-            src="https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=700"
-            alt="SHERPA Dashboard Interface"
-            className="rounded-2xl shadow-2xl w-full h-auto"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-slate-700 p-8 shadow-2xl">
+            <div className="flex items-center justify-center space-x-8 text-slate-400">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                  <Shield className="w-6 h-6 text-green-400" />
+                </div>
+                <p className="text-sm">Secure</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                  <Shield className="w-6 h-6 text-blue-400" />
+                </div>
+                <p className="text-sm">Reliable</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                  <Shield className="w-6 h-6 text-purple-400" />
+                </div>
+                <p className="text-sm">Trusted</p>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
