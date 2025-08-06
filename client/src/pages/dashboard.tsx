@@ -4,6 +4,7 @@ import Sidebar from '@/components/Dashboard/Sidebar';
 import TopBar from '@/components/Dashboard/TopBar';
 import DashboardOverview from '@/components/Dashboard/DashboardOverview';
 import VulnerabilitiesPage from '@/components/Dashboard/VulnerabilitiesPage';
+import VulnerabilityFeedPage from '@/components/Dashboard/VulnerabilityFeedPage';
 import AIChatPage from '@/components/Dashboard/AIChatPage';
 import ReportsPage from '@/components/Dashboard/ReportsPage';
 import AnalyticsPage from '@/components/Dashboard/AnalyticsPage';
@@ -11,7 +12,7 @@ import TeamPage from '@/components/Dashboard/TeamPage';
 import SettingsPage from '@/components/Dashboard/SettingsPage';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-export type DashboardPage = 'dashboard' | 'vulnerabilities' | 'ai-chat' | 'reports' | 'analytics' | 'team' | 'settings';
+export type DashboardPage = 'dashboard' | 'vulnerabilities' | 'vuln-feed' | 'ai-chat' | 'reports' | 'analytics' | 'team' | 'settings';
 
 export default function Dashboard() {
   const [currentPage, setCurrentPage] = useState<DashboardPage>('dashboard');
@@ -24,6 +25,8 @@ export default function Dashboard() {
         return <DashboardOverview />;
       case 'vulnerabilities':
         return <VulnerabilitiesPage />;
+      case 'vuln-feed':
+        return <VulnerabilityFeedPage />;
       case 'ai-chat':
         return <AIChatPage />;
       case 'reports':

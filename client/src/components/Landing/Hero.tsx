@@ -51,7 +51,7 @@ export default function Hero({ onGetStartedClick }: HeroProps) {
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{ delay: 1.5, duration: 3, ease: "linear" }}
-              className="block typewriter text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-400 overflow-hidden whitespace-nowrap border-r-2 border-white"
+              className="block typewriter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 overflow-hidden whitespace-nowrap border-r-2 border-white"
             >
               Digital Assets
             </motion.span>

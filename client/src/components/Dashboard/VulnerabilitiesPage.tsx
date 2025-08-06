@@ -28,8 +28,8 @@ const statusColors = {
 
 export default function VulnerabilitiesPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [severityFilter, setSeverityFilter] = useState('');
-  const [statusFilter, setStatusFilter] = useState('');
+  const [severityFilter, setSeverityFilter] = useState('all');
+  const [statusFilter, setStatusFilter] = useState('all');
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingVuln, setEditingVuln] = useState<Vulnerability | null>(null);
   const [formData, setFormData] = useState({
@@ -48,8 +48,8 @@ export default function VulnerabilitiesPage() {
     return vulnerabilities.filter(vuln => {
       const matchesSearch = vuln.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            vuln.assignedTo.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesSeverity = !severityFilter || vuln.severity === severityFilter;
-      const matchesStatus = !statusFilter || vuln.status === statusFilter;
+      const matchesSeverity = severityFilter === 'all' || vuln.severity === severityFilter;
+      const matchesStatus = statusFilter === 'all' || vuln.status === statusFilter;
       
       return matchesSearch && matchesSeverity && matchesStatus;
     });
@@ -202,7 +202,7 @@ export default function VulnerabilitiesPage() {
                 <SelectValue placeholder="All Severities" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Severities</SelectItem>
+                <SelectItem value="all">All Severities</SelectItem>
                 <SelectItem value="critical">Critical</SelectItem>
                 <SelectItem value="high">High</SelectItem>
                 <SelectItem value="medium">Medium</SelectItem>
@@ -214,7 +214,7 @@ export default function VulnerabilitiesPage() {
                 <SelectValue placeholder="All Statuses" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Statuses</SelectItem>
+                <SelectItem value="all">All Statuses</SelectItem>
                 <SelectItem value="open">Open</SelectItem>
                 <SelectItem value="in-progress">In Progress</SelectItem>
                 <SelectItem value="resolved">Resolved</SelectItem>

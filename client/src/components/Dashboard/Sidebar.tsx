@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, LayoutDashboard, ShieldAlert, Bot, FileText, TrendingUp, Users, Settings, LogOut } from 'lucide-react';
+import { Shield, LayoutDashboard, ShieldAlert, Upload, Bot, FileText, TrendingUp, Users, Settings, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/use-auth';
 import { useLocation } from 'wouter';
@@ -16,6 +16,7 @@ interface SidebarProps {
 const menuItems = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { id: 'vulnerabilities', label: 'Vulnerabilities', icon: ShieldAlert },
+  { id: 'vuln-feed', label: 'Feed Analysis', icon: Upload },
   { id: 'ai-chat', label: 'AI Chat', icon: Bot },
   { id: 'reports', label: 'Reports', icon: FileText },
   { id: 'analytics', label: 'Analytics', icon: TrendingUp },
